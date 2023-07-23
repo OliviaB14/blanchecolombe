@@ -1,16 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {TranslateModule} from '@ngx-translate/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MenubarModule } from 'primeng/menubar';
+import { MenubarComponent } from './components/menubar/menubar.component';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenubarComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    TranslateModule.forRoot(),
+    InputTextModule,
+    MenubarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
